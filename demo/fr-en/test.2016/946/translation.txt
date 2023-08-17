@@ -1,0 +1,17 @@
+id = 946
+: une personne âgée traverse une rue avec un parapluie à la main .
+target ref : an elderly person is crossing a street with an umbrella in their hands
+s2t+tts    : a person was crossing a street with a parapet in his hand
+BLEU = 21.59 50.0/27.3/20.0/11.1 (BP = 0.920 ratio = 0.923 hyp_len = 12 ref_len = 13)
+asr+mt+tts : an aggressor crosses the street with a hand support
+BLEU = 7.27 44.4/12.5/7.1/4.2 (BP = 0.641 ratio = 0.692 hyp_len = 9 ref_len = 13)
+textless   : an elderly person is crossing a street with an umbrella
+BLEU = 74.08 100.0/100.0/100.0/100.0 (BP = 0.741 ratio = 0.769 hyp_len = 10 ref_len = 13)
+textless+mf: an elderly person is crossing a street with an umbrella
+BLEU = 74.08 100.0/100.0/100.0/100.0 (BP = 0.741 ratio = 0.769 hyp_len = 10 ref_len = 13)
+wav2vec2   : an elderly person is walking a street with an umbrella in hand
+BLEU = 58.34 83.3/72.7/60.0/44.4 (BP = 0.920 ratio = 0.923 hyp_len = 12 ref_len = 13)
+wav2vec2+ca: an elderly person walks through the street with an umbrella
+BLEU = 28.15 70.0/55.6/37.5/14.3 (BP = 0.741 ratio = 0.769 hyp_len = 10 ref_len = 13)
+wav2vec2+mf: an elderly person is crossing a street with an umbrella in hand
+BLEU = 83.14 91.7/90.9/90.0/88.9 (BP = 0.920 ratio = 0.923 hyp_len = 12 ref_len = 13)

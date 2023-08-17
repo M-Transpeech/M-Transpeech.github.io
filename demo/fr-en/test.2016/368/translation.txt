@@ -1,0 +1,17 @@
+id = 368
+: une petite fille en robe à carreaux violette est allongée sur le sol en train de pleurer .
+target ref : a little girl in a purple plaid dress is lying on the floor crying
+s2t+tts    : a little dress carried the back and lying on the soil with crying
+BLEU = 14.56 53.8/25.0/9.1/5.0 (BP = 0.926 ratio = 0.929 hyp_len = 13 ref_len = 14)
+asr+mt+tts : he little gold flasding purple just long on the ground crying
+BLEU = 7.18 45.5/10.0/5.6/3.1 (BP = 0.761 ratio = 0.786 hyp_len = 11 ref_len = 14)
+textless   : a little girl in a propl dress is lying on the ground in the foreground
+BLEU = 49.20 66.7/57.1/46.2/33.3 (BP = 1.000 ratio = 1.071 hyp_len = 15 ref_len = 14)
+textless+mf: a little girl in a purple dress and lies on the ground
+BLEU = 40.91 75.0/54.5/40.0/33.3 (BP = 0.846 ratio = 0.857 hyp_len = 12 ref_len = 14)
+wav2vec2   : a little girl in a purple dress is lying on the floor crying
+BLEU = 78.82 100.0/91.7/81.8/70.0 (BP = 0.926 ratio = 0.929 hyp_len = 13 ref_len = 14)
+wav2vec2+ca: a little girl in a purple dress is lying on the floor lying on the floor
+BLEU = 60.26 75.0/66.7/57.1/46.2 (BP = 1.000 ratio = 1.143 hyp_len = 16 ref_len = 14)
+wav2vec2+mf: a little girl in a purple plaid dress is lying on the ground
+BLEU = 84.46 92.3/91.7/90.9/90.0 (BP = 0.926 ratio = 0.929 hyp_len = 13 ref_len = 14)

@@ -1,0 +1,17 @@
+id = 869
+: une femme assise sur un très gros rocher , souriant pour la photo avec des arbres en arrière-plan .
+target ref : a woman sitting on a very large rock smiling at the camera with trees in the background
+s2t+tts    : a woman seated on a large rock would be smiling for the picture of trees in the background
+BLEU = 21.04 66.7/35.3/12.5/6.7 (BP = 1.000 ratio = 1.059 hyp_len = 18 ref_len = 17)
+asr+mt+tts : a woman sitting on a very large cheek smiling from the fire with trees in the background
+BLEU = 58.57 82.4/62.5/53.3/42.9 (BP = 1.000 ratio = 1.000 hyp_len = 17 ref_len = 17)
+textless   : a lady sitting in a rock smiling at the camera smiling in the background
+BLEU = 31.08 78.6/46.2/33.3/18.2 (BP = 0.807 ratio = 0.824 hyp_len = 14 ref_len = 17)
+textless+mf: a woman sitting on a very large rock smiling to the camera with trees in the background
+BLEU = 82.82 94.1/87.5/80.0/71.4 (BP = 1.000 ratio = 1.000 hyp_len = 17 ref_len = 17)
+wav2vec2   : a woman sitting ot a very large rock smiling for the camera with trees in the background
+BLEU = 64.23 88.2/75.0/60.0/42.9 (BP = 1.000 ratio = 1.000 hyp_len = 17 ref_len = 17)
+wav2vec2+ca: a woman sitting on a large rock smiling to the camera with the camera in the background
+BLEU = 41.41 82.4/62.5/40.0/14.3 (BP = 1.000 ratio = 1.000 hyp_len = 17 ref_len = 17)
+wav2vec2+mf: a woman sitting on a very large rock smiling at the camera with trees in the background
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 17 ref_len = 17)

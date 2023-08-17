@@ -1,0 +1,17 @@
+id = 329
+: deux hommes portant des bonnets .
+target ref : two men wearing hats
+s2t+tts    : two men were calling back
+BLEU = 21.36 40.0/25.0/16.7/12.5 (BP = 1.000 ratio = 1.250 hyp_len = 5 ref_len = 4)
+asr+mt+tts : two men wer
+BLEU = 0.00 66.7/50.0/50.0/0.0 (BP = 0.717 ratio = 0.750 hyp_len = 3 ref_len = 4)
+textless   : two men were in hats
+BLEU = 23.64 60.0/25.0/16.7/12.5 (BP = 1.000 ratio = 1.250 hyp_len = 5 ref_len = 4)
+textless+mf: two men were in glasses
+BLEU = 21.36 40.0/25.0/16.7/12.5 (BP = 1.000 ratio = 1.250 hyp_len = 5 ref_len = 4)
+wav2vec2   : two men wearin caps a wearing caps
+BLEU = 14.54 42.9/16.7/10.0/6.2 (BP = 1.000 ratio = 1.750 hyp_len = 7 ref_len = 4)
+wav2vec2+ca: two men wer in caps
+BLEU = 21.36 40.0/25.0/16.7/12.5 (BP = 1.000 ratio = 1.250 hyp_len = 5 ref_len = 4)
+wav2vec2+mf: two men wearing hats
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 4 ref_len = 4)

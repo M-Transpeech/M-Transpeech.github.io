@@ -1,0 +1,17 @@
+id = 286
+: un chien brun sur le point d' attraper un frisbee vert .
+target ref : a brown dog about to catch a green frisbee
+s2t+tts    : someone is brown on the point atchino
+BLEU = 4.94 14.3/8.3/5.0/3.1 (BP = 0.751 ratio = 0.778 hyp_len = 7 ref_len = 9)
+asr+mt+tts : the brown dog on the dense plum gram of biber fry
+BLEU = 7.50 18.2/10.0/5.6/3.1 (BP = 1.000 ratio = 1.222 hyp_len = 11 ref_len = 9)
+textless   : a brown dog is about a cat a frisby in the green frispy
+BLEU = 13.67 46.2/16.7/9.1/5.0 (BP = 1.000 ratio = 1.444 hyp_len = 13 ref_len = 9)
+textless+mf: a brown dod is about a cat a frisby
+BLEU = 11.34 44.4/12.5/7.1/4.2 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)
+wav2vec2   : a brown dod is about a cata green frisky
+BLEU = 11.99 55.6/12.5/7.1/4.2 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)
+wav2vec2+ca: a brown dod is about to catch a frisby
+BLEU = 35.49 66.7/50.0/28.6/16.7 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)
+wav2vec2+mf: a brown dog about to catch a green frispy
+BLEU = 86.33 88.9/87.5/85.7/83.3 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)

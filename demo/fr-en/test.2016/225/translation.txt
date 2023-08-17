@@ -1,0 +1,17 @@
+id = 225
+: un homme et un garçon sur une plage rocheuse .
+target ref : a man and a boy on a rocky beach
+s2t+tts    : a man and a boy on a rock beach
+BLEU = 75.06 88.9/75.0/71.4/66.7 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)
+asr+mt+tts : a man and a bol on a rough be
+BLEU = 35.49 66.7/50.0/28.6/16.7 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)
+textless   : a man and a boy ot a rocky beat
+BLEU = 51.33 77.8/62.5/42.9/33.3 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)
+textless+mf: a man and boy on a rocky cliff
+BLEU = 44.12 87.5/71.4/50.0/20.0 (BP = 0.882 ratio = 0.889 hyp_len = 8 ref_len = 9)
+wav2vec2   : a man and a boy on a racke beat
+BLEU = 72.60 77.8/75.0/71.4/66.7 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)
+wav2vec2+ca: a man at a boy on a rocky beat
+BLEU = 51.33 77.8/62.5/42.9/33.3 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)
+wav2vec2+mf: a man and a boy on a rocky beat
+BLEU = 86.33 88.9/87.5/85.7/83.3 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)

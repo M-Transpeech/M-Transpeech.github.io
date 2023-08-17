@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>M-Transpeech: Multimodal Textless Speech to Speech Translation</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        table td,
+        table th {
+            border: 1px black solid;
+            padding: 10px 30px;
+        }
+
+        table th {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Abstract</h1>
+    <p>Textless Speech-to-Speech Translation (S2ST) aims to translate speech in the source language into speech in the
+        target language, without relying on or generating text in either the source or target language. Although
+        textless S2ST has achieved satisfactory translation results, it is sometimes limited by the single modality of
+        speech and may fail to fully understand the semantic context, leading to incorrect translations. Therefore, we
+        propose a multimodal S2ST model, named M-Transpeech, incorporating visual features to supplement information
+        that might be overlooked in the speech modality, thus better aiding speech translation. Considering the
+        sacrifice of paired speech-image data, we employ pre-trained speech and image encoders to reduce training data
+        requirements, and the features extracted by pre-trained encoders can also be effectively integrated in the
+        subsequent M-Fusion module. To address the challenge that the extended length of speech and image sequences are
+        difficult to fuse, we introduce M-Fusion module to better integrate speech and image features. Experiments show
+        that M-Transpeech improves an average of 1.04 BLEU over single modality S2ST, proving the effectiveness of the
+        visual modality in speech translation and the key importance of M-Fusion in integrating speech and visual
+        features.</p>
+    <h1>Demo</h1>
+    <h2>fr→en</h2>
+
+    <audio controls height="100" width="100"><source src="demo/fr-en/test.2016/851/wav2vec2+mf.wav" type="audio/wav"></audio>
+
+    <table>
+        <thead>
+            <tr>
+                <th> </th>
+                <th>source</th>
+                <th>target</th>
+                <th>S2T+TTS</th>
+                <th>ASR+NMT+TTS</th>
+                <th>textless S2UT</th>
+                <th>textless S2UT+M-Fusion</th>
+                <th>wav2vec2 S2UT</th>
+                <th>wav2vec2 S2UT+cross_attention</th>
+                <th>M-Transpeech</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Sample 1</th>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td><audio controls height="100" width="100"><source src="demo/fr-en/test.2016/851/wav2vec2+mf.wav" type="audio/wav"></audio></td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>deux enfants jouent sur un vélo.</td>
+                <td>two children are playing on a bicycle</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td>null</td>
+                <td>null</td>
+                <td>two children i en i we be bike</td>
+                <td>to children a source abides</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <th>Sample 2</th>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <th>Sample 3</th>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+                <td>null</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2>es→en</h2>
+    <h2>en→fr</h2>
+    <h2>en→es</h2>
+</body>
+
+</html>

@@ -10,6 +10,10 @@
         }
 
         h2 {
+            text-align: center;
+        }
+
+        h3 {
             text-align: left;
         }
 
@@ -30,7 +34,8 @@
 </head>
 
 <body>
-    <h1>Abstract</h1>
+    <h1>M-Transpeech: Multimodal Textless Speech to Speech Translation</h1>
+    <h2>Abstract</h2>
     <p>Textless Speech-to-Speech Translation (S2ST) aims to translate speech in the source language into speech in the
         target language, without relying on or generating text in either the source or target language. Although
         textless S2ST has achieved satisfactory translation results, it is sometimes limited by the single modality of
@@ -44,11 +49,373 @@
         that M-Transpeech improves an average of 1.04 BLEU over single modality S2ST, proving the effectiveness of the
         visual modality in speech translation and the key importance of M-Fusion in integrating speech and visual
         features.</p>
-    <h1>Demo</h1>
-    <h2>fr→en</h2>
+    <h2>Demo</h2>
+    <h3>en→fr</h3>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>source</th>
+                <th>target</th>
+                <th>S2T+TTS</th>
+                <th>ASR+NMT+TTS</th>
+                <th>textless S2UT</th>
+                <th>textless S2UT+M-Fusion</th>
+                <th>wav2vec2 S2UT</th>
+                <th>wav2vec2 S2UT+cross_attention</th>
+                <th>M-Transpeech</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Sample 1</th>
+                <td><img src="demo/en-fr/test.2016/612/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2016/612/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2016/612/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2016/612/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2016/612/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2016/612/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2016/612/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2016/612/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2016/612/wav2vec2+ca.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2016/612/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>a young girl is trying to brush a goat.</td>
+                <td>une jeune fille essaie de brosser une chevre</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td></td>
+                <td></td>
+                <td>une jeune fille essaye de brosser une chvre une chevre</td>
+                <td>une jeune fille essaie de brosser une jeune fille essaie de brosser une chate</td>
+                <td>une jeune fille essayant de grocher un bateau</td>
+                <td>une jeune fille tente de frapper une brosse de buisseau</td>
+                <td>une jeune fille tente de brosser un chaviot</td>
+                <td>une jeune fille tente de brosser une brosse</td>
+                <td>une jeune fille essaie de brosser une chevre</td>
+            </tr>
+            <tr>
+                <th>Sample 2</th>
+                <td><img src="demo/en-fr/test.2017/321/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/321/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/321/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/321/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/321/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/321/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/321/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/321/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/321/wav2vec2+ca.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/321/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>two men performing bicycle tricks on blocks.</td>
+                <td>deux hommes faisant des figures en velo sur des blocs</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td></td>
+                <td></td>
+                <td>deux hommes faisant des tours de velo sur des pates de maison</td>
+                <td>deux hommes effectuent des essais de bicyclette sur des plaques</td>
+                <td>deux hommes fond de la moutou en train de faire des blocs</td>
+                <td>deux hommes effectuent des figures sur des blocs de benis</td>
+                <td>deux hommes faisant des figures en velo sur des boisseaux</td>
+                <td>deux hommes faisant du velo sur des blos</td>
+                <td>deux hommes faisant des figures en velo sur des blocs</td>
+            </tr>
+            <tr>
+                <th>Sample 3</th>
+                <td><img src="demo/en-fr/test.2017/370/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/370/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/370/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/370/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/370/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/370/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/370/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/370/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/370/wav2vec2+ca.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-fr/test.2017/370/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>trees are in front of a large mountain.</td>
+                <td>des arbres sont devant une grande montagne</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td></td>
+                <td></td>
+                <td>les arbres sont devant une grande mbiomebre sont devant une grande montagne</td>
+                <td>les arbres se trouvent en face d'une grande montagne</td>
+                <td>trois agents sont sur une grande montagne</td>
+                <td>trois hommes sont devant une grande montagne</td>
+                <td>des arbes sont devant une grande montagne</td>
+                <td>des arbres devant une grande montagne</td>
+                <td>des arbres sont devant une grande montagne</td>
+            </tr>
+        </tbody>
+    </table>
 
-    <audio controls height="100" width="100"><source src="demo/fr-en/test.2016/851/wav2vec2+mf.wav" type="audio/wav"></audio>
+    <h3>en→es</h3>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>source</th>
+                <th>target</th>
+                <th>S2T+TTS</th>
+                <th>ASR+NMT+TTS</th>
+                <th>textless S2UT</th>
+                <th>textless S2UT+M-Fusion</th>
+                <th>wav2vec2 S2UT</th>
+                <th>wav2vec2 S2UT+cross_attention</th>
+                <th>M-Transpeech</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Sample 1</th>
+                <td><img src="demo/en-es/test.2016/214/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/214/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/214/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/214/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/214/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/214/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/214/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/214/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/214/wav2vec2+ca.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/214/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>three boys are playing with sponges and buckets of water.</td>
+                <td>tres ninos estan jugando con esponjas y cubos de agua</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td></td>
+                <td></td>
+                <td>tres chicos estan jugando con esponjas y baldosas de agua</td>
+                <td>tres ninos estan jugando con espongas y buques de agua habia</td>
+                <td>tres ninos estan jugando con cuvos y cubiertas de agua</td>
+                <td>tres ninos estan jugando con ropa de cubos y agua</td>
+                <td>tres ninos estan jugando computadoras y cuevos del agua</td>
+                <td>tres ninos estan jugando con pollas y bubes de agua</td>
+                <td>tres ninos estan jugando con esponjas y cubos de agua</td>
+            </tr>
+            <tr>
+                <th>Sample 2</th>
+                <td><img src="demo/en-es/test.2016/114/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/114/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/114/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/114/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/114/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/114/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/114/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/114/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/114/wav2vec2+ca.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/114/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>a man in white pants and a blue shirt is kicking a yellow boxing bag.</td>
+                <td>un hombre con pantalones blancos y una camisa azul esta pateando una bolsa de boxeo amarilla</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td></td>
+                <td></td>
+                <td>un hombre en pantalones blancos y una camisa azul esta tomando una caja amarilla de papa</td>
+                <td>un hombre en pantalons blancos y una mercancia azul esta pechando una bolsa de caja azul</td>
+                <td>un hombre con pantalones blanco y una camisa azul esta pateando una bolsa amarilla</td>
+                <td>un hombre con pantalones blancos y una camisa azul esta pateando una bolsa de bloque</td>
+                <td>un hombre con pantalones blancos y una camisa azul eszapateando una bolsa de botella amarilla</td>
+                <td>un hombre con pantalones blancos y una camisa azul esta pateando una bolsa de boxe amarilla</td>
+                <td>un hombre con pantalones blancos y una camisa azul esta pateando una bolsa de boxeo amarilla</td>
+            </tr>
+            <tr>
+                <th>Sample 3</th>
+                <td><img src="demo/en-es/test.2016/73/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/73/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/73/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/73/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/73/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/73/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/73/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/73/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/73/wav2vec2+ca.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/en-es/test.2016/73/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>two ladies and three men looking at the ocean.</td>
+                <td>dos damas y tres hombres mirando el oceano</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td></td>
+                <td></td>
+                <td>dos mujeres y tres hombres miran al oceano</td>
+                <td>el comite recomienda al estado parte que adopte todas las medidas necesarias para garantizar la
+                    igualdad entre los generos y el empoderamiento de la mujer</td>
+                <td>dos senoras y tres hombres mirando al aciano</td>
+                <td>dos senoras y tres hombres mirando el oceano</td>
+                <td>dos senoras y tres hombres mirando el ociano</td>
+                <td>dos senoras y tres hombres mirando el ociano</td>
+                <td>dos damas y tres hombres mirando el oceano</td>
+            </tr>
+        </tbody>
+    </table>
 
+    <h3>fr→en</h3>
     <table>
         <thead>
             <tr>
@@ -67,117 +434,351 @@
         <tbody>
             <tr>
                 <th>Sample 1</th>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td><audio controls height="100" width="100"><source src="demo/fr-en/test.2016/851/wav2vec2+mf.wav" type="audio/wav"></audio></td>
+                <td><img src="demo/fr-en/test.2016/851/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/851/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/851/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/851/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/851/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/851/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/851/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/851/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/851/wav2vec2+ca.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/851/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
             </tr>
             <tr>
                 <th>Reference</th>
                 <td>deux enfants jouent sur un vélo.</td>
                 <td>two children are playing on a bicycle</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
             </tr>
             <tr>
                 <th>ASR</th>
-                <td>null</td>
-                <td>null</td>
+                <td> </td>
+                <td> </td>
                 <td>two children i en i we be bike</td>
                 <td>to children a source abides</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
+                <td>two children are playing on a bike</td>
+                <td>two children are playing on a bag</td>
+                <td>two children play on a bicycle</td>
+                <td>two children are playing on a bag</td>
+                <td>two children are playing on a bicycle</td>
             </tr>
             <tr>
                 <th>Sample 2</th>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
+                <td><img src="demo/fr-en/test.2016/869/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/869/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/869/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/869/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/869/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/869/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/869/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/869/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/869/wav2vec2+ca.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/869/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
             </tr>
             <tr>
                 <th>Reference</th>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
+                <td>une femme assise sur un très gros rocher , souriant pour la photo avec des arbres en arrière-plan.
+                </td>
+                <td>a woman sitting on a very large rock smiling at the camera with trees in the background</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
             </tr>
             <tr>
                 <th>ASR</th>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
+                <td> </td>
+                <td> </td>
+                <td>a woman seated on a large rock would be smiling for the picture of trees in the background</td>
+                <td>a woman sitting on a very large cheek smiling from the fire with trees in the background</td>
+                <td>a lady sitting in a rock smiling at the camera smiling in the background</td>
+                <td>a woman sitting on a very large rock smiling to the camera with trees in the background</td>
+                <td>a woman sitting ot a very large rock smiling for the camera with trees in the background</td>
+                <td>a woman sitting on a large rock smiling to the camera with the camera in the background</td>
+                <td>a woman sitting on a very large rock smiling at the camera with trees in the background</td>
             </tr>
             <tr>
                 <th>Sample 3</th>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
+                <td><img src="demo/fr-en/test.2017/393/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2016/869/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2017/393/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2017/393/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2017/393/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2017/393/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2017/393/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2017/393/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2017/393/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/fr-en/test.2017/393/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
             </tr>
             <tr>
                 <th>Reference</th>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
+                <td>une femme en pull blanc prend une photo d' une personne.</td>
+                <td>a woman in a white sweater is taking a picture of a person</td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
+                <td> </td>
             </tr>
             <tr>
                 <th>ASR</th>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
-                <td>null</td>
+                <td> </td>
+                <td> </td>
+                <td>the white woman takes a picture in a person</td>
+                <td>a woman in a blanket takes a picture of a person</td>
+                <td>a woman in a white shirt is taking a picture of a person</td>
+                <td>a woman in a white shirt takes a picture of a person</td>
+                <td>a woman in a white shirt takes a picture of a person</td>
+                <td>a woman in a white shirt is taking a picture of a person</td>
+                <td>a woman in a white sweater is taking a picture of a person</td>
             </tr>
         </tbody>
     </table>
-    <h2>es→en</h2>
-    <h2>en→fr</h2>
-    <h2>en→es</h2>
+
+    <h3>es→en</h3>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>source</th>
+                <th>target</th>
+                <th>S2T+TTS</th>
+                <th>ASR+NMT+TTS</th>
+                <th>textless S2UT</th>
+                <th>textless S2UT+M-Fusion</th>
+                <th>wav2vec2 S2UT</th>
+                <th>wav2vec2 S2UT+cross_attention</th>
+                <th>M-Transpeech</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Sample 1</th>
+                <td><img src="demo/es-en/test.2016/13/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/13/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/13/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/13/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/13/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/13/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/13/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/13/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/13/wav2vec2+ca.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/13/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>Una mujer sosteniendo un tazón de comida en una cocina.</td>
+                <td>a woman holding a bowl of food in a kitchen</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td></td>
+                <td></td>
+                <td>i will not continue to have frut peel in a kitchen</td>
+                <td>the committee recommends that the state part</td>
+                <td>a woman holding a counter in a kitchen</td>
+                <td>a woman holding a meal in a kitchen</td>
+                <td>a woman holding a bowling foot in a kitchen</td>
+                <td>a woman holding a bull in a kitchen</td>
+                <td>a woman holding a bowl of food in a kitchen</td>
+            </tr>
+            <tr>
+                <th>Sample 2</th>
+                <td><img src="demo/es-en/test.2016/367/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/367/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/367/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/367/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/367/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/367/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/367/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/367/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/367/wav2vec2+ca.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/367/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>Un grupo de mujeres están tocando instrumentos musicales juntas.</td>
+                <td>a group of women are playing musical instruments together</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td></td>
+                <td></td>
+                <td>the group of women even changing musical instruments together</td>
+                <td>the committee recommends that the state pa necessary measures to insure the thum</td>
+                <td>a group of women are playing musical instruments</td>
+                <td>a group of women are playing musical instruments</td>
+                <td>a group of women are playing musical instruments</td>
+                <td>a group of women are playing musical instruments</td>
+                <td>a group of women are playing musical instruments together</td>
+            </tr>
+            <tr>
+                <th>Sample 3</th>
+                <td><img src="demo/es-en/test.2016/557/image.jpg" height="200"><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/557/src.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/557/tgt.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/557/s2t+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/557/asr+mt+tts.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/557/textless.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/557/textless+mf.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/557/wav2vec2.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/557/wav2vec2+ca.wav" type="audio/wav">
+                    </audio></td>
+                <td><audio controls height="100" width="100">
+                        <source src="demo/es-en/test.2016/557/wav2vec2+mf.wav" type="audio/wav">
+                    </audio></td>
+            </tr>
+            <tr>
+                <th>Reference</th>
+                <td>Un hombre con un sombrero de globo hace animales de globo.</td>
+                <td>a man with a balloon hat makes balloon animals</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>ASR</th>
+                <td></td>
+                <td></td>
+                <td>a man with a head overwelmed for wos</td>
+                <td>the committee recommends that the state party</td>
+                <td>a man in a black hat looks out of her balloos</td>
+                <td>a man in a balloon hat doing blows</td>
+                <td>a man in a balloon hat makes a balloon animals</td>
+                <td>a man wearing a balloon hat towards a violence</td>
+                <td>a man with a balloon hat makes balloon animals</td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 
 </html>

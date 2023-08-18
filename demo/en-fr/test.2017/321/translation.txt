@@ -1,0 +1,17 @@
+id = 321
+: two men performing bicycle tricks on blocks .
+target ref : deux hommes faisant des figures en velo sur des blocs
+s2t+tts    : deux hommes faisant des tours de velo sur des pates de maison
+BLEU = 30.66 58.3/45.5/30.0/11.1 (BP = 1.000 ratio = 1.200 hyp_len = 12 ref_len = 10)
+asr+mt+tts : deux hommes effectuent des essais de bicyclette sur des plaques
+BLEU = 12.55 50.0/22.2/6.2/3.6 (BP = 1.000 ratio = 1.000 hyp_len = 10 ref_len = 10)
+textless   : deux hommes fond de la moutou en train de faire des blocs
+BLEU = 10.13 41.7/18.2/5.0/2.8 (BP = 1.000 ratio = 1.200 hyp_len = 12 ref_len = 10)
+textless+mf: deux hommes effectuent des figures sur des blocs de benis
+BLEU = 22.96 70.0/44.4/12.5/7.1 (BP = 1.000 ratio = 1.000 hyp_len = 10 ref_len = 10)
+wav2vec2   : deux hommes faisant des figures en velo sur des boisseaux
+BLEU = 88.01 90.0/88.9/87.5/85.7 (BP = 1.000 ratio = 1.000 hyp_len = 10 ref_len = 10)
+wav2vec2+ca: deux hommes faisant du velo sur des blos
+BLEU = 26.92 75.0/57.1/33.3/10.0 (BP = 0.779 ratio = 0.800 hyp_len = 8 ref_len = 10)
+wav2vec2+mf: deux hommes faisant des figures en velo sur des blocs
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 10 ref_len = 10)

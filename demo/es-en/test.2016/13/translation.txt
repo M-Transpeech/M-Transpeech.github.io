@@ -1,0 +1,17 @@
+id = 13
+: Una mujer sosteniendo un tazón de comida en una cocina.
+target ref : a woman holding a bowl of food in a kitchen
+s2t+tts    : i will not continue to have frut peel in a kitchen
+BLEU = 13.95 27.3/20.0/11.1/6.2 (BP = 1.000 ratio = 1.100 hyp_len = 11 ref_len = 10)
+asr+mt+tts : the committee recommends that the state part
+BLEU = 2.14 7.1/4.2/2.5/1.6 (BP = 0.651 ratio = 0.700 hyp_len = 7 ref_len = 10)
+textless   : a woman holding a counter in a kitchen
+BLEU = 38.94 87.5/71.4/50.0/20.0 (BP = 0.779 ratio = 0.800 hyp_len = 8 ref_len = 10)
+textless+mf: a woman holding a meal in a kitchen
+BLEU = 38.94 87.5/71.4/50.0/20.0 (BP = 0.779 ratio = 0.800 hyp_len = 8 ref_len = 10)
+wav2vec2   : a woman holding a bowling foot in a kitchen
+BLEU = 38.63 77.8/62.5/42.9/16.7 (BP = 0.895 ratio = 0.900 hyp_len = 9 ref_len = 10)
+wav2vec2+ca: a woman holding a bull in a kitchen
+BLEU = 38.94 87.5/71.4/50.0/20.0 (BP = 0.779 ratio = 0.800 hyp_len = 8 ref_len = 10)
+wav2vec2+mf: a woman holding a bowl of food in a kitchen
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 10 ref_len = 10)

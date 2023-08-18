@@ -1,0 +1,17 @@
+id = 557
+: Un hombre con un sombrero de globo hace animales de globo.
+target ref : a man with a balloon hat makes balloon animals
+s2t+tts    : a man with a head overwelmed for wos
+BLEU = 30.51 50.0/42.9/33.3/20.0 (BP = 0.882 ratio = 0.889 hyp_len = 8 ref_len = 9)
+asr+mt+tts : the committee recommends that the state party
+BLEU = 2.47 7.1/4.2/2.5/1.6 (BP = 0.751 ratio = 0.778 hyp_len = 7 ref_len = 9)
+textless   : a man in a black hat looks out of her balloos
+BLEU = 8.91 36.4/10.0/5.6/3.1 (BP = 1.000 ratio = 1.222 hyp_len = 11 ref_len = 9)
+textless+mf: a man in a balloon hat doing blows
+BLEU = 22.81 62.5/42.9/16.7/10.0 (BP = 0.882 ratio = 0.889 hyp_len = 8 ref_len = 9)
+wav2vec2   : a man in a balloon hat makes a balloon animals
+BLEU = 35.49 80.0/55.6/25.0/14.3 (BP = 1.000 ratio = 1.111 hyp_len = 10 ref_len = 9)
+wav2vec2+ca: a man wearing a balloon hat towards a violence
+BLEU = 22.32 55.6/37.5/14.3/8.3 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)
+wav2vec2+mf: a man with a balloon hat makes balloon animals
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)

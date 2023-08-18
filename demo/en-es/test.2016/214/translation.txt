@@ -1,0 +1,17 @@
+id = 214
+: three boys are playing with sponges and buckets of water .
+target ref : tres ninos estan jugando con esponjas y cubos de agua
+s2t+tts    : tres chicos estan jugando con esponjas y baldosas de agua
+BLEU = 46.71 80.0/55.6/37.5/28.6 (BP = 1.000 ratio = 1.000 hyp_len = 10 ref_len = 10)
+asr+mt+tts : tres ninos estan jugando con espongas y buques de agua habia
+BLEU = 41.72 72.7/50.0/33.3/25.0 (BP = 1.000 ratio = 1.100 hyp_len = 11 ref_len = 10)
+textless   : tres ninos estan jugando con cuvos y cubiertas de agua
+BLEU = 46.71 80.0/55.6/37.5/28.6 (BP = 1.000 ratio = 1.000 hyp_len = 10 ref_len = 10)
+textless+mf: tres ninos estan jugando con ropa de cubos y agua
+BLEU = 45.50 90.0/44.4/37.5/28.6 (BP = 1.000 ratio = 1.000 hyp_len = 10 ref_len = 10)
+wav2vec2   : tres ninos estan jugando computadoras y cuevos del agua
+BLEU = 29.56 66.7/37.5/28.6/16.7 (BP = 0.895 ratio = 0.900 hyp_len = 9 ref_len = 10)
+wav2vec2+ca: tres ninos estan jugando con pollas y bubes de agua
+BLEU = 46.71 80.0/55.6/37.5/28.6 (BP = 1.000 ratio = 1.000 hyp_len = 10 ref_len = 10)
+wav2vec2+mf: tres ninos estan jugando con esponjas y cubos de agua
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 10 ref_len = 10)

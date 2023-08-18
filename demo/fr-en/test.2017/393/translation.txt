@@ -1,0 +1,17 @@
+id = 393
+: une femme en pull blanc prend une photo d' une personne .
+target ref : a woman in a white sweater is taking a picture of a person
+s2t+tts    : the white woman takes a picture in a person
+BLEU = 11.01 77.8/37.5/7.1/4.2 (BP = 0.641 ratio = 0.692 hyp_len = 9 ref_len = 13)
+asr+mt+tts : a woman in a blanket takes a picture of a person
+BLEU = 49.00 81.8/70.0/55.6/37.5 (BP = 0.834 ratio = 0.846 hyp_len = 11 ref_len = 13)
+textless   : a woman in a white shirt is taking a picture of a person
+BLEU = 76.12 92.3/83.3/72.7/60.0 (BP = 1.000 ratio = 1.000 hyp_len = 13 ref_len = 13)
+textless+mf: a woman in a white shirt takes a picture of a person
+BLEU = 58.34 83.3/72.7/60.0/44.4 (BP = 0.920 ratio = 0.923 hyp_len = 12 ref_len = 13)
+wav2vec2   : a woman in a white shirt takes a picture of a person
+BLEU = 58.34 83.3/72.7/60.0/44.4 (BP = 0.920 ratio = 0.923 hyp_len = 12 ref_len = 13)
+wav2vec2+ca: a woman in a white shirt is taking a picture of a person
+BLEU = 76.12 92.3/83.3/72.7/60.0 (BP = 1.000 ratio = 1.000 hyp_len = 13 ref_len = 13)
+wav2vec2+mf: a woman in a white sweater is taking a picture of a person
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 13 ref_len = 13)

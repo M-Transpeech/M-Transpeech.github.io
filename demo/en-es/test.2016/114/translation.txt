@@ -1,0 +1,17 @@
+id = 114
+: a man in white pants and a blue shirt is kicking a yellow boxing bag .
+target ref : un hombre con pantalones blancos y una camisa azul esta pateando una bolsa de boxeo amarilla
+s2t+tts    : un hombre en pantalones blancos y una camisa azul esta tomando una caja amarilla de papa
+BLEU = 44.29 75.0/46.7/35.7/30.8 (BP = 1.000 ratio = 1.000 hyp_len = 16 ref_len = 16)
+asr+mt+tts : un hombre en pantalons blancos y una mercancia azul esta pechando una bolsa de caja azul
+BLEU = 19.25 62.5/40.0/14.3/3.8 (BP = 1.000 ratio = 1.000 hyp_len = 16 ref_len = 16)
+textless   : un hombre con pantalones blanco y una camisa azul esta pateando una bolsa amarilla
+BLEU = 61.89 92.9/76.9/66.7/54.5 (BP = 0.867 ratio = 0.875 hyp_len = 14 ref_len = 16)
+textless+mf: un hombre con pantalones blancos y una camisa azul esta pateando una bolsa de bloque
+BLEU = 86.57 93.3/92.9/92.3/91.7 (BP = 0.936 ratio = 0.938 hyp_len = 15 ref_len = 16)
+wav2vec2   : un hombre con pantalones blancos y una camisa azul eszapateando una bolsa de botella amarilla
+BLEU = 61.80 86.7/71.4/61.5/50.0 (BP = 0.936 ratio = 0.938 hyp_len = 15 ref_len = 16)
+wav2vec2+ca: un hombre con pantalones blancos y una camisa azul esta pateando una bolsa de boxe amarilla
+BLEU = 87.62 93.8/86.7/85.7/84.6 (BP = 1.000 ratio = 1.000 hyp_len = 16 ref_len = 16)
+wav2vec2+mf: un hombre con pantalones blancos y una camisa azul esta pateando una bolsa de boxeo amarilla
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 16 ref_len = 16)

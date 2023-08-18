@@ -1,0 +1,17 @@
+id = 73
+: two ladies and three men looking at the ocean .
+target ref : dos damas y tres hombres mirando el oceano
+s2t+tts    : dos mujeres y tres hombres miran al oceano
+BLEU = 23.36 62.5/28.6/16.7/10.0 (BP = 1.000 ratio = 1.000 hyp_len = 8 ref_len = 8)
+asr+mt+tts : el comite recomienda al estado parte que adopte todas las medidas necesarias para garantizar la igualdad entre los generos y el empoderamiento de la mujer
+BLEU = 1.79 8.0/2.1/1.1/0.6 (BP = 1.000 ratio = 3.125 hyp_len = 25 ref_len = 8)
+textless   : dos senoras y tres hombres mirando al aciano
+BLEU = 36.56 62.5/42.9/33.3/20.0 (BP = 1.000 ratio = 1.000 hyp_len = 8 ref_len = 8)
+textless+mf: dos senoras y tres hombres mirando el oceano
+BLEU = 70.71 87.5/71.4/66.7/60.0 (BP = 1.000 ratio = 1.000 hyp_len = 8 ref_len = 8)
+wav2vec2   : dos senoras y tres hombres mirando el ociano
+BLEU = 54.11 75.0/57.1/50.0/40.0 (BP = 1.000 ratio = 1.000 hyp_len = 8 ref_len = 8)
+wav2vec2+ca: dos senoras y tres hombres mirando el ociano
+BLEU = 54.11 75.0/57.1/50.0/40.0 (BP = 1.000 ratio = 1.000 hyp_len = 8 ref_len = 8)
+wav2vec2+mf: dos damas y tres hombres mirando el oceano
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 8 ref_len = 8)

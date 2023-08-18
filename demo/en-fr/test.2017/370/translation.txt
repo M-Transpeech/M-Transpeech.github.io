@@ -1,0 +1,17 @@
+id = 370
+: trees are in front of a large mountain .
+target ref : des arbres sont devant une grande montagne
+s2t+tts    : les arbres sont devant une grande mbiomebre sont devant une grande montagne
+BLEU = 41.72 50.0/45.5/40.0/33.3 (BP = 1.000 ratio = 1.714 hyp_len = 12 ref_len = 7)
+asr+mt+tts : les arbres se trouvent en face d'une grande montagne
+BLEU = 10.55 33.3/12.5/7.1/4.2 (BP = 1.000 ratio = 1.286 hyp_len = 9 ref_len = 7)
+textless   : trois agents sont sur une grande montagne
+BLEU = 26.27 57.1/33.3/20.0/12.5 (BP = 1.000 ratio = 1.000 hyp_len = 7 ref_len = 7)
+textless+mf: trois hommes sont devant une grande montagne
+BLEU = 61.48 71.4/66.7/60.0/50.0 (BP = 1.000 ratio = 1.000 hyp_len = 7 ref_len = 7)
+wav2vec2   : des arbes sont devant une grande montagne
+BLEU = 64.35 85.7/66.7/60.0/50.0 (BP = 1.000 ratio = 1.000 hyp_len = 7 ref_len = 7)
+wav2vec2+ca: des arbres devant une grande montagne
+BLEU = 51.15 100.0/80.0/50.0/33.3 (BP = 0.846 ratio = 0.857 hyp_len = 6 ref_len = 7)
+wav2vec2+mf: des arbres sont devant une grande montagne
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 7 ref_len = 7)

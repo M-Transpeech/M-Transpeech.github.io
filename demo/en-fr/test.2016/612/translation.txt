@@ -1,0 +1,17 @@
+id = 612
+: a young girl is trying to brush a goat .
+target ref : une jeune fille essaie de brosser une chevre
+s2t+tts    : une jeune fille essaye de brosser une chvre une chevre
+BLEU = 28.87 70.0/55.6/25.0/7.1 (BP = 1.000 ratio = 1.250 hyp_len = 10 ref_len = 8)
+asr+mt+tts : une jeune fille essaie de brosser une jeune fille essaie de brosser une chate
+BLEU = 43.24 50.0/46.2/41.7/36.4 (BP = 1.000 ratio = 1.750 hyp_len = 14 ref_len = 8)
+textless   : une jeune fille essayant de grocher un bateau
+BLEU = 22.09 50.0/28.6/16.7/10.0 (BP = 1.000 ratio = 1.000 hyp_len = 8 ref_len = 8)
+textless+mf: une jeune fille tente de frapper une brosse de buisseau
+BLEU = 17.75 50.0/22.2/12.5/7.1 (BP = 1.000 ratio = 1.250 hyp_len = 10 ref_len = 8)
+wav2vec2   : une jeune fille tente de brosser un chaviot
+BLEU = 25.85 62.5/42.9/16.7/10.0 (BP = 1.000 ratio = 1.000 hyp_len = 8 ref_len = 8)
+wav2vec2+ca: une jeune fille tente de brosser une brosse
+BLEU = 34.57 75.0/57.1/33.3/10.0 (BP = 1.000 ratio = 1.000 hyp_len = 8 ref_len = 8)
+wav2vec2+mf: une jeune fille essaie de brosser une chevre
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 8 ref_len = 8)

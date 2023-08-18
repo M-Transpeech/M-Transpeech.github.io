@@ -1,0 +1,17 @@
+id = 367
+: Un grupo de mujeres están tocando instrumentos musicales juntas.
+target ref : a group of women are playing musical instruments together
+s2t+tts    : the group of women even changing musical instruments together
+BLEU = 29.85 66.7/50.0/28.6/8.3 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)
+asr+mt+tts : the committee recommends that the state pa necessary measures to insure the thum
+BLEU = 1.54 3.8/2.1/1.1/0.6 (BP = 1.000 ratio = 1.444 hyp_len = 13 ref_len = 9)
+textless   : a group of women are playing musical instruments
+BLEU = 88.25 100.0/100.0/100.0/100.0 (BP = 0.882 ratio = 0.889 hyp_len = 8 ref_len = 9)
+textless+mf: a group of women are playing musical instruments
+BLEU = 88.25 100.0/100.0/100.0/100.0 (BP = 0.882 ratio = 0.889 hyp_len = 8 ref_len = 9)
+wav2vec2   : a group of women are playing musical instruments
+BLEU = 88.25 100.0/100.0/100.0/100.0 (BP = 0.882 ratio = 0.889 hyp_len = 8 ref_len = 9)
+wav2vec2+ca: a group of women are playing musical instruments
+BLEU = 88.25 100.0/100.0/100.0/100.0 (BP = 0.882 ratio = 0.889 hyp_len = 8 ref_len = 9)
+wav2vec2+mf: a group of women are playing musical instruments together
+BLEU = 100.00 100.0/100.0/100.0/100.0 (BP = 1.000 ratio = 1.000 hyp_len = 9 ref_len = 9)

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>M-Transpeech: Multimodal Textless Speech to Speech Translation</title>
+    <title>VisualTrans: Visual feature augmented speech-to-speech translation with M-Fusion</title>
     <style>
         h1 {
             text-align: center;
@@ -34,21 +34,21 @@
 </head>
 
 <body>
-    <h1>M-Transpeech: Multimodal Textless Speech to Speech Translation</h1>
+    <h1>VisualTrans: Visual feature augmented speech-to-speech translation with M-Fusion</h1>
     <h2>Abstract</h2>
-    <p>Textless Speech-to-Speech Translation (S2ST) aims to translate speech in the source language into speech in the
-        target language, without relying on or generating text in either the source or target language. Although
-        textless S2ST has achieved satisfactory translation results, it is sometimes limited by the single modality of
-        speech and may fail to fully understand the semantic context, leading to incorrect translations. Therefore, we
-        propose a multimodal S2ST model, named M-Transpeech, incorporating visual features to supplement information
-        that might be overlooked in the speech modality, thus better aiding speech translation. Considering the
-        sacrifice of paired speech-image data, we employ pre-trained speech and image encoders to reduce training data
-        requirements, and the features extracted by pre-trained encoders can also be effectively integrated in the
-        subsequent M-Fusion module. To address the challenge that the extended length of speech and image sequences are
-        difficult to fuse, we introduce M-Fusion module to better integrate speech and image features. Experiments show
-        that M-Transpeech improves an average of 1.04 BLEU over single modality S2ST, proving the effectiveness of the
-        visual modality in speech translation and the key importance of M-Fusion in integrating speech and visual
-        features.</p>
+    <p>Textless Speech-to-Speech Translation (S2ST) aims to translate speech from the source language into speech in the
+        target language without relying on or generating text in either the source or target language. However, in noisy
+        environments, the speech modality may sometimes lose certain acoustic or semantic information, resulting in
+        translation errors. By introducing scene images that describe the source language context as a visual modality,
+        which compensates for the distorted semantic information in the speech modality, we can effectively enhance the
+        model's ability of speech translation. Therefore, we propose a multimodal S2ST model, named VisualTrans,
+        integrating the visual modality into speech to improve speech translation performance. To address the challenge
+        of fusing speech and visual modalities, we introduce the M-Fusion module, which is designed to align speech
+        features and visual features in the scene images that are described in the speech. This module injects
+        additional visual information into the speech modality, thereby assisting in speech translation. Experimental
+        results demonstrate that VisualTrans outperforms S2ST models with an average improvement of 1.04 BLEU points.
+        Moreover, it exhibits more stable performance in noisy environments and demonstrates higher tolerance to noisy
+        data. </p>
     <h2>Demo</h2>
     <h3>en→fr</h3>
     <table>
